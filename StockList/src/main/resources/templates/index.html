@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Data</title>
+</head>
+<body style="background-color: #EDEEF3;">
+	
+	<table>
+		<thead>
+			<tr style="color: #119082;margin: auto;">
+				<th>Name</th>
+				<th>Symbol</th>
+				<th>Open</th>
+				<th>Day High</th>
+				<th>Day Low</th>
+				<th>Last Price</th>
+				<th>Previous Close</th>
+				<th>Change</th>
+				<th>Previous Change</th>
+				<th>Total Traded Volume</th>
+				<th>Last Update Time</th>
+				<th>Year High</th>
+				<th>Year Low</th>
+				<th>PerChange 365d</th>
+				<th>PerChange30d</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr style="color: #602EB2; font-weight: bold;" th:each="stl : ${stlist}">
+				<td th:text="${stl.getSymbol()}"></td>
+				<td th:text="${stl.getIdentifier()}"></td>
+				<td th:text="${stl.getOpen()}"></td>
+				<td th:text="${stl.getDayHigh()}"></td>
+				<td th:text="${stl.getDayLow()}"></td>
+				<td th:text="${stl.getLastPrice()}"></td>
+				<td th:text="${stl.getPreviousClose()}"></td>
+				<td th:text="${stl.getChange()}"></td>
+				<td th:text="${stl.getpChange()}"></td>
+				<td th:text="${stl.getTotalTradedVolume()}"></td>
+				<td th:text="${stl.getLastUpdateTime()}"></td>
+				<td th:text="${stl.getYearHigh()}"></td>
+				<td th:text="${stl.getYearLow()}"></td>
+				<td th:text="${stl.getPerChange365d()}"></td>
+				<td th:text="${stl.getPerChange30d()}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
